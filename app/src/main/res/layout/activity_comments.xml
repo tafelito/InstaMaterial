@@ -45,7 +45,8 @@
             android:paddingBottom="4dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/etComment"
@@ -55,7 +56,7 @@
                 android:textColor="#555555"
                 android:textSize="14sp" />
 
-            <io.github.froger.instamaterial.ui.view.SendCommentButton
+            <io.github.froger.instamaterial.view.SendCommentButton
                 android:id="@+id/btnSendComment"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"

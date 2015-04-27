@@ -11,14 +11,14 @@
 
             <item android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp">
                 <shape android:shape="oval">
-                    <solid android:color="@color/style_color_accent" />
+                    <solid android:color="@color/medium_blue" />
                 </shape>
             </item>
         </layer-list>
     </item>
     <item android:state_pressed="true">
         <shape android:bottom="2dp" android:left="2dp" android:right="2dp" android:shape="oval" android:top="2dp">
-            <solid android:color="@color/fab_color_pressed" />
+            <solid android:color="@color/medium_blue" />
         </shape>
     </item>
 </selector>

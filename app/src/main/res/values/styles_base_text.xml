@@ -1,0 +1,81 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Typography -->
+    <style name="TextAppearance.Regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="TextAppearance.Condensed" parent="@style/TextAppearance.AppCompat">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextAppearance.Condensed.Regular">
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="TextAppearance.Regular.Display1">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+    <style name="TextAppearance.Regular.Summary">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+    <style name="TextAppearance.Regular.List">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+    
+    <style name="TextAppearance.Regular.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+    
+    <style name="TextAppearance.Regular.ContactInfo">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+    
+    <style name="TextAppearance.Condensed.Display1">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+    <style name="TextAppearance.Condensed.Display2">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+    <style name="TextAppearance.Condensed.Name">
+        <item name="android:textSize">@dimen/text_size_11</item>
+    </style>
+    <style name="TextAppearance.Condensed.Labels">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold.Header">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold.Title">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+    <style name="TextAppearance.Condensed.Regular.Title">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+    <style name="TextAppearance.Condensed.Buttons">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold.Display1">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+    <style name="TextAppearance.Condensed.List">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+    <style name="TextAppearance.Condensed.ActionBar">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold.Headline">
+        <item name="android:textSize">@dimen/text_size_22</item>
+    </style>
+    <style name="TextAppearance.Condensed.Regular.DataPointListHeader">
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+    <style name="TextAppearance.Condensed.Bold.DataPointListValue">
+        <item name="android:textSize">@dimen/text_size_22</item>
+    </style>
+
+</resources>

@@ -1,28 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?><!-- item_feed.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_feed.xml -->
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="8dp"
+    android:layout_margin="4dp"
     card_view:cardCornerRadius="4dp">
 
     <LinearLayout
+        android:id="@+id/feed_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivUserProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_feed_top" />
-
-        <io.github.froger.instamaterial.ui.view.SquaredFrameLayout
-            android:id="@+id/vImageRoot"
+        <RelativeLayout
+            android:id="@+id/feed_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/feed_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/content_report" />
+
+            <TextView
+                android:id="@+id/feed_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/feed_type"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxWidth="150dp"
+                android:text="GLOBAL RATES AND FX STRATEGY"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="12sp"
+                android:textColor="@color/medium_blue" />
+
+            <LinearLayout
+                android:id="@+id/feed_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/feed_category"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/light_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALERT"
+                    android:textSize="12sp"
+                    android:textColor="@color/red"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/feed_briefcase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/feed_timestamp"
+                android:src="@drawable/content_briefcase"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/feed_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Today, 2:22PM"
+                android:textSize="12sp"
+                android:textColor="@color/light_gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/feed_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="fill_horizontal"
+            android:paddingTop="8dp"
+            android:text="JPM FX: Derivates Chartpack Notes"
+            android:textColor="@color/medium_gray"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/feed_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:gravity="fill_horizontal"
+            android:maxLines="3"
+            android:text="Phasellus e vehicula arcu. Integer dui orci, congue non neque et, tempus rutrum mi. Donec et risus"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/medium_gray"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <io.github.froger.instamaterial.view.SquaredFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/ivFeedCenter"
@@ -34,43 +141,67 @@
                 android:id="@+id/vBgLike"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_like_circle_background"
-                android:visibility="gone" />
+                android:background="@drawable/bg_like_circle_background" />
 
             <ImageView
                 android:id="@+id/ivLike"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="center"
-                android:src="@drawable/ic_heart_outline_white"
-                android:visibility="gone" />
+                android:src="@drawable/ic_heart_outline_white" />
 
-        </io.github.froger.instamaterial.ui.view.SquaredFrameLayout>
+        </io.github.froger.instamaterial.view.SquaredFrameLayout>
 
         <ImageView
             android:id="@+id/ivFeedBottom"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/feed_authors"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/global_profile" />
+
+                <TextView
+                    android:id="@+id/feed_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Bruce Kasman"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_like_counter" />
+
+            </LinearLayout>
 
             <ImageButton
                 android:id="@+id/btnLike"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/ic_heart_outline_grey" />
+                android:src="@drawable/actionbar_add_briefcase" />
 
             <ImageButton
                 android:id="@+id/btnComments"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@drawable/btn_feed_action"
-                android:src="@drawable/ic_comment_outline_grey" />
+                android:src="@drawable/ic_comment_outline_grey"
+                android:visibility="gone"/>
 
             <ImageButton
                 android:id="@+id/btnMore"
@@ -78,12 +209,12 @@
                 android:layout_height="48dp"
                 android:background="@drawable/btn_feed_action"
                 android:src="@drawable/ic_more_grey" />
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_vertical|right">
+                android:gravity="center_vertical|right"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="wrap_content"

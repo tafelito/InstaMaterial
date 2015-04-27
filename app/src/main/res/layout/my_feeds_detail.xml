@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/feed_detail_analyst_header"
+        layout="@layout/item_list_analysts"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/feed_detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/list_item_padding"
+            android:paddingRight="@dimen/list_item_padding"
+            android:paddingTop="@dimen/list_item_padding_top_bottom"
+            android:paddingBottom="@dimen/analyst_padding_bio" >
+
+            <TextView
+                android:id="@+id/feed_detail_title"
+                style="@style/FeedDetailTitle"
+                android:text="Apple Inc.: Updating Model with Updated Watch Pricing Information"/>
+
+            <TextView
+                android:id="@+id/feed_detail_category"
+                style="@style/FeedDetailCategory"
+                android:text="EQUITY RESEARCH"/>
+
+            <TextView
+                android:id="@+id/feed_detail_timestamp"
+                style="@style/FeedDetailTimeStamp"
+                android:text="03/10/2015, 12:33AM"/>
+
+            <TextView
+                android:id="@+id/feed_detail_analist"
+                style="@style/FeedDetailTimeStamp"
+                android:text="od Hall, CFA, Ashwin Kesireddy, +1 more..."/>
+
+            <ProgressBar
+                android:id="@+id/progress_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/feed_detail_body"
+                style="@style/FeedDetailBody"
+                android:textIsSelectable="true" />
+
+            <!--<include
+                android:id="@+id/feed_detail_empty"
+                layout="@layout/empty_state_layout"
+                android:visibility="visible" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <!--<include
+        android:id="@+id/feed_detail_empty_action"
+        layout="@layout/empty_state_action_layout"
+        android:visibility="gone" />-->
+
+    <Button
+        android:id="@+id/button_view_document"
+        android:text="@string/view_pdf"
+        style="@style/ButtonStyle"
+        android:visibility="gone" />
+
+</LinearLayout>

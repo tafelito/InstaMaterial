@@ -5,7 +5,92 @@
     <dimen name="btn_fab_margins">16dp</dimen>
     <dimen name="default_elevation">8dp</dimen>
     <dimen name="comment_avatar_size">56dp</dimen>
-    <dimen name="user_profile_avatar_size">88dp</dimen>
-    <dimen name="global_menu_avatar_size">64dp</dimen>
-    <dimen name="publish_photo_thumbnail_size">96dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_short">8dp</dimen>
+    <dimen name="margin_extra_short">4dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="toolbar_margin_start">72dp</dimen>
+    <dimen name="flexible_space_height">72dp</dimen>
+    <dimen name="flexible_space_image_height">240dp</dimen>
+    <dimen name="flexible_space_show_fab_offset">120dp</dimen>
+
+    <dimen name="parallax_image_height">180dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+
+    <dimen name="header_bar_height">72dp</dimen>
+    <dimen name="intersection_height">16dp</dimen>
+
+    <dimen name="sliding_slop">32dp</dimen>
+    <dimen name="sliding_overlay_blur_size">4dp</dimen>
+
+    <dimen name="padding_tel_mail_info">36dp</dimen>
+
+    <!-- Analyst detail padding   -->
+    <dimen name="analyst_padding_bio">16dp</dimen>
+    <dimen name="analyst_padding_bio_bottom">32dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+
+    <!-- List Styles -->
+    <dimen name="single_list_item">48dp</dimen>
+    <dimen name="single_list_sub_item">16dp</dimen>
+    <dimen name="double_list_item">56dp</dimen>
+    <dimen name="analyst_list_style">72dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+    <dimen name="list_item_padding_top_bottom">8dp</dimen>
+    <dimen name="list_image_padding">20dp</dimen>
+    <dimen name="small_sticky_header">16dp</dimen>
+    <dimen name="large_sticky_header">40dp</dimen>
+    <dimen name="filter_min_height">192dp</dimen>
+    <dimen name="filter_max_height">252dp</dimen>
+    <dimen name="calendar_week_header_text">28dp</dimen>
+    <dimen name="selection_list_width">270dp</dimen>
+    <dimen name="selection_list_height">350dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="button_height_size">48dp</dimen>
+    <dimen name="button_gap_size">10dp</dimen>
+
+    <!-- Draggable dimes-->
+    <dimen name="top_fragment_height">200dip</dimen>
+    <dimen name="top_fragment_margin">10dip</dimen>
+    <dimen name="place_renderer_height">200dip</dimen>
+    <dimen name="tv_show_fan_art_height">150dip</dimen>
+    <dimen name="button_title_padding_left_right">10dip</dimen>
+    <dimen name="button_title_text_size">18sp</dimen>
+    <dimen name="button_title_margin_top">10dip</dimen>
+    <item name="x_scale_factor" format="float" type="dimen">2</item>
+    <item name="y_scale_factor" format="float" type="dimen">2</item>
+    <dimen name="grid_view_vertical_spacing">10dip</dimen>
+    <dimen name="grid_view_horizontal_spacing">10dip</dimen>
+    <dimen name="grid_view_margin">10dip</dimen>
+    <dimen name="divider_height">1dip</dimen>
+    <dimen name="episodes_header_padding">10dip</dimen>
+    <dimen name="episodes_header_padding_left">16dip</dimen>
+    <dimen name="episode_padding_left_right">6dip</dimen>
+    <dimen name="episode_number">38sp</dimen>
+    <dimen name="episode_title">20sp</dimen>
+    <dimen name="episode_title_margin_top">6dip</dimen>
+    <dimen name="episode_title_margin_left">8dip</dimen>
+    <dimen name="episode_publish_date_margin_left">8dip</dimen>
+    <dimen name="episode_publish_date_margin_bottom">2dip</dimen>
+    <dimen name="place_title_margin">5dip</dimen>
+    <dimen name="tv_show_title_margin_left_top">5dip</dimen>
+    <dimen name="tv_show_margin_left">5dip</dimen>
+    <dimen name="tv_show_margin_bottom">10dip</dimen>
 </resources>

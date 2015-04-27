@@ -3,7 +3,6 @@ package io.github.froger.instamaterial;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
-import android.os.Build;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -40,9 +39,5 @@ public class Utils {
         }
 
         return screenWidth;
-    }
-
-    public static boolean isAndroid5() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
     }
 }

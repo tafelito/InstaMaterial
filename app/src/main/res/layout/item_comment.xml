@@ -4,28 +4,62 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/llAnalyst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="start|center"
         android:paddingBottom="8dp"
-        android:paddingTop="8dp">
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:transitionName="analyst_detail">
 
         <ImageView
             android:id="@+id/ivUserAvatar"
             android:layout_width="@dimen/comment_avatar_size"
             android:layout_height="@dimen/comment_avatar_size"
-            android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/bg_comment_avatar" />
+            android:background="@drawable/global_profile" />
 
-        <TextView
-            android:id="@+id/tvComment"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:text="Lorem ipsum dolor sit amet" />
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/medium_gray"
+                android:textSize="16sp"
+                android:text="Bruce Kasman" />
+
+
+            <TextView
+                android:id="@+id/analystSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Medical Supplies &amp; Devices"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/feedSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/medium_blue"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="+FEED"/>
     </LinearLayout>
 
     <View

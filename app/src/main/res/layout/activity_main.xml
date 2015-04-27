@@ -1,31 +1,177 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/view_feed_toolbar" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvFeed"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:scrollbars="none" />
+        tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/btnCreate"
-        android:layout_width="@dimen/btn_fab_size"
-        android:layout_height="@dimen/btn_fab_size"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="@dimen/btn_fab_margins"
-        android:layout_marginRight="@dimen/btn_fab_margins"
-        android:background="@drawable/btn_fab_default"
-        android:elevation="@dimen/default_elevation"
-        android:src="@drawable/ic_instagram_white"
-        android:textSize="28sp" />
-</RelativeLayout>
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_feed_toolbar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvFeed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:scrollbars="none" />
+
+        <ImageButton
+            android:id="@+id/btnCreate"
+            android:layout_width="@dimen/btn_fab_size"
+            android:layout_height="@dimen/btn_fab_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/btn_fab_margins"
+            android:layout_marginRight="@dimen/btn_fab_margins"
+            android:background="@drawable/btn_fab_default"
+            android:elevation="@dimen/default_elevation"
+            android:src="@drawable/global_fab"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+    <!-- DraggableView -->
+
+    <com.github.pedrovgs.DraggableView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:draggable_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/draggable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        draggable_view:bottom_view_id="@+id/feed_detail"
+        draggable_view:enable_minimized_horizontal_alpha_effect="false"
+        draggable_view:top_view_height="@dimen/top_fragment_height"
+        draggable_view:top_view_id="@+id/video_container"
+        draggable_view:top_view_resize="true"
+        draggable_view:top_view_x_scale_factor="@dimen/x_scale_factor"
+        draggable_view:top_view_y_scale_factor="@dimen/y_scale_factor">
+
+        <!-- Video Thumbnail -->
+
+        <!--<ImageView
+            android:id="@+id/iv_thumbnail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/dragView"
+            android:scaleType="centerCrop" />-->
+
+        <include
+            android:id="@+id/feed_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/dragView"
+            android:background="@color/white"
+            layout="@layout/my_feeds_detail" />
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/feed_detail"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_below="@+id/dragView"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<ScrollView-->
+                <!--android:id="@+id/feed_detail_scroll_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/feed_detail_title"-->
+                    <!--style="@style/FeedDetailTitle"-->
+                    <!--android:text="Apple Inc.: Updating Model with Updated Watch Pricing Information" />-->
+            <!--</ScrollView>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/button_view_document"-->
+                <!--style="@style/ButtonStyle"-->
+                <!--android:text="@string/view_pdf"-->
+                <!--android:visibility="gone" />-->
+
+        <!--</LinearLayout>-->
+
+        <!-- VideoView -->
+
+        <FrameLayout
+            android:id="@+id/video_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="visible"/>
+
+
+            <ImageButton android:id="@+id/pause"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"/>
+
+
+            <LinearLayout
+                android:id="@+id/video_controller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:background="#CC000000"
+                android:visibility="visible">
+
+                <TextView android:id="@+id/time_current"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dip"
+                    android:paddingLeft="4dip"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#bebebe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="4dip"/>
+
+                <SeekBar
+                    android:id="@+id/mediacontroller_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="32dip" />
+
+                <TextView android:id="@+id/time"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dip"
+                    android:paddingRight="4dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#bebebe"
+                    android:paddingLeft="4dip"/>
+
+                <ImageButton android:id="@+id/fullscreen"
+                    android:layout_marginTop="-7dp"
+                    android:paddingTop="4dip"
+                    android:paddingBottom="4dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="4dip"
+                    android:layout_gravity="top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/ic_media_fullscreen_stretch"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </com.github.pedrovgs.DraggableView>
+
+</FrameLayout>

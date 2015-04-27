@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--colors.xml-->
+<!-- colors.xml -->
 <resources>
+
     <color name="style_color_primary">#2d5d82</color>
     <color name="style_color_primary_dark">#21425d</color>
     <color name="style_color_accent">#01bcd5</color>
-
     <color name="fab_color_pressed">#007787</color>
     <color name="fab_color_shadow">#44000000</color>
-
     <color name="btn_default_light_normal">#00000000</color>
     <color name="btn_default_light_pressed">#40ffffff</color>
     <color name="btn_send_normal">#02c754</color>
@@ -16,8 +15,46 @@
     <color name="btn_context_menu_normal">#ffffff</color>
     <color name="btn_context_menu_pressed">#40000000</color>
     <color name="btn_context_menu_text_red">#ffff0000</color>
-
     <color name="text_like_counter">#2b5a83</color>
-
     <color name="bg_comments">#ffffff</color>
+
+    <!-- Primary Colors -->
+    <color name="dark_gray">#231F20</color>
+    <color name="medium_gray">#4C4C4C</color>
+    <color name="light_gray">#989898</color>
+    <color name="rule_gray">#E6E6E6</color>
+    <color name="dark_blue">#22313F</color>
+    <color name="medium_blue">#3498DB</color>
+    <color name="off_white">#DEDEDE</color>
+
+    <!-- Accent Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="purple">#8F45AE</color>
+    <color name="green">#231F20</color>
+    <color name="orange">#DF8000</color>
+    <color name="red">#E8301A</color>
+    <color name="light_yellow">#FEFAF0</color>
+
+    <!-- Other Colors -->
+    <color name="medium_blue_alpha">#333498DB</color>
+    <color name="dark_blue_alpha">#4D22313F</color>
+    <color name="dark_gray_alpha">#EE231F20</color>
+    <color name="white_alpha">#EEFFFFFF</color>
+    <color name="rule_gray_alpha">#4DE6E6E6</color>
+    <color name="green_alpha">#4D231F20</color>
+    <color name="orange_alpha">#4DDF8000</color>
+    <color name="black_overlay">#66000000</color>
+
+    <!-- Draggable Colors-->
+    <color name="semi_transparent_black">#7f000000</color>
+    <color name="black_transparent">#00000000</color>
+    <color name="soft_white">#f0f0f0</color>
+    <color name="grey">#8b999b</color>
+    <color name="hard_grey">#e4e5e7</color>
+    <color name="soft_grey">#508b999b</color>
+    <color name="text_grey">#727a7c</color>
+    <color name="text_soft_grey">#aab0b0</color>
+    <color name="text_hard_grey">#57585a</color>
+
 </resources>
